@@ -1,33 +1,188 @@
 # Impact of AI Learning Behavior on Student Academic Performance  
-# AI 学习行为对学生学业表现的影响
-
-### Methods used | 使用的方法
+### Methods used
 **Category A**
 - Facet Chart
 - Linear Regression
 - Logistic Regression
-
 **Category B**
 - Lasso Regression
-
-### Business objective | 业务目标
+### Business objective
 This project examines how learning behavior and AI usage patterns are associated with student performance, identifies at-risk students, and extracts the most important variables for educational intervention.  
-本项目分析学习行为与 AI 使用模式如何与学生成绩相关，识别高风险学生，并提炼最关键的干预变量，为教育管理决策提供支持。
-
-
-
-
-### Key patterns to discuss | 重点讨论的结论方向
+### Key patterns to discuss
 1. Traditional learning factors such as attendance, concept understanding, and study consistency are expected to remain strong predictors of performance.  
-   出勤率、概念理解度、学习一致性等传统学习变量通常仍然是成绩的重要预测因素。
 2. AI usage itself may not be the main issue; dependency and substitution-oriented usage are more important.  
-   AI 使用本身未必是问题核心，更值得关注的是依赖程度以及替代性使用方式。
 3. The at-risk model can support early-warning intervention for education managers.  
-   高风险识别模型可以为教育管理者提供早期预警支持。
 4. Lasso helps narrow managerial focus to a smaller set of high-impact indicators.  
-   Lasso 可以帮助管理层把注意力集中在少数高影响指标上。
 
-### Suggested report phrasing | 报告写作建议
-> AI is not inherently beneficial or harmful; its impact depends on how it is integrated into students' learning behavior.  
-> AI 并非天然有益或有害，其影响取决于它是如何被整合进学生学习过程中的。
+# 📘 AI + Education: Does AI Improve Learning?
+
+> **“AI won’t replace humans — but humans with AI will replace humans without AI.”**  
+> — Harvard Business Review
+
+---
+
+## 📌 Project Overview
+
+This project investigates a critical question:
+
+> **Does AI usage actually improve student learning outcomes?**
+
+With the rapid adoption of AI tools in education, students increasingly rely on AI for studying, coding, note-taking, and exam preparation. However, the effectiveness of such usage remains unclear.
+
+This project uses **data-driven analysis and machine learning models** to explore:
+
+- The relationship between AI usage and academic performance  
+- The impact of different AI usage behaviors  
+- Whether AI improves or harms learning outcomes  
+
+---
+
+## 🎯 Key Findings
+
+### 🔹 1. AI Usage ≠ Better Performance  
+- No significant difference in average scores between AI users and non-users  
+- AI adoption is high, but performance improvement is inconsistent  
+
+---
+
+### 🔹 2. Learning Fundamentals Drive Success  
+- Strong predictors:
+  - `last_exam_score`  
+  - `assignment_scores_avg`  
+  - `concept_understanding_score`  
+
+👉 Academic performance is primarily driven by **learning ability**, not AI usage  
+
+---
+
+### 🔹 3. AI Can Both Help and Harm  
+- **Supportive usage** (e.g., learning, explanation) → positive  
+- **Substitutive usage** (e.g., copying answers) → negative  
+
+---
+
+### 🔹 4. Over-Reliance on AI is Risky  
+- High `ai_generated_content_percentage` →  
+  - lower scores  
+  - higher failure risk  
+
+---
+
+## 🔥 Core Insight
+
+> **AI is not a substitute for learning — it is a multiplier of learning behavior**
+
+---
+
+## 📊 Dataset
+
+- 📁 Source: Kaggle – *Student Performance & Academic Trends Dataset*  
+- 📈 Size:
+  - 8,000 rows  
+  - 26 features  
+
+### Key Variables
+
+| Category | Features |
+|----------|--------|
+| AI Behavior | `ai_usage_time`, `ai_prompts_per_week`, `ai_generated_content_percentage` |
+| Learning Behavior | `study_hours_per_day`, `study_consistency_index`, `attendance_percentage` |
+| Performance | `final_score`, `passed`, `last_exam_score` |
+
+---
+
+## ⚙️ Methodology
+
+### 1️⃣ Exploratory Data Analysis (EDA)
+- Distribution analysis (scores, AI usage)
+- Correlation heatmaps
+- Outlier detection (boxplots)
+
+---
+
+### 2️⃣ Feature Engineering
+- AI usage grouping (Low / Medium / High)
+- AI usage style (Supportive / Substitutive / Mixed)
+
+---
+
+### 3️⃣ Modeling
+
+#### 📌 Linear Regression
+- Predict `final_score`
+
+#### 📌 Logistic Regression
+- Predict `passed` / `at_risk`
+
+#### 📌 Lasso Regression
+- Feature selection  
+- Identify key drivers of performance  
+
+---
+
+### 4️⃣ Evaluation Metrics
+
+- Accuracy  
+- Precision / Recall / F1-score  
+- ROC-AUC  
+
+---
+
+## 📈 Key Visualizations
+
+- Correlation heatmap (learning vs AI variables)  
+- Boxplots (AI usage vs performance)  
+- Interaction heatmaps (usage style × performance)  
+- Lasso feature importance  
+
+---
+
+## 🧠 Business Insights
+
+### 🎓 For Universities
+- Develop AI usage guidelines  
+- Integrate AI into structured learning  
+- Introduce AI literacy & ethics education  
+
+---
+
+### 👨‍🎓 For Students
+- Shift from **passive usage → active learning**  
+- Use AI for:
+  - explanation  
+  - practice  
+  - feedback  
+
+---
+
+### 🏢 For EdTech
+
+Inspired by this project:
+
+**CogniPal.AI – AI-powered learning system**
+
+- AI usage monitoring  
+- Personalized learning recommendations  
+- Behavior-driven tutoring  
+
+---
+
+## 🚀 Strategic Insight
+
+> The future of education is not AI tools —  
+> but AI-powered learning systems
+
+---
+
+---
+
+## 🛠️ Tech Stack
+
+- Python  
+- Pandas / NumPy  
+- Matplotlib / Seaborn  
+- Scikit-learn  
+
+---
+
 
